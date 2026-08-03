@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Digital - Revenue-Driven Data Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="AZ Digital" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#demo" class="nav-link">Demo</a>
+                <a href="#contact" class="nav-link cta-link">Get Free Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Revenue-Driven <span class="gradient-text">Data Intelligence</span>
+                </h1>
+                <p class="hero-subtitle">
+                    I don't just build dashboards. I audit your data, uncover what's actually working, and build systems that drive measurable revenue growth.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Start Your Free Audit</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('process')">See My Process</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Dashboard Systems Built</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Marketing Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Revenue Growth Potential</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <canvas id="canvas3d"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Why Different) -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">Why I'm Different</h2>
+            <div class="about-grid">
+                <div class="about-card parallax-card" style="--index: 0">
+                    <div class="card-icon">📊</div>
+                    <h3>Data + Marketing</h3>
+                    <p>I'm not just an analyst—I have deep digital marketing expertise. I know what healthy metrics look like and can spot red flags most analysts miss.</p>
+                </div>
+                <div class="about-card parallax-card" style="--index: 1">
+                    <div class="card-icon">💰</div>
+                    <h3>Revenue Focused</h3>
+                    <p>Everything ties back to business impact. Every dashboard, every metric, every insight is designed to increase your bottom line.</p>
+                </div>
+                <div class="about-card parallax-card" style="--index: 2">
+                    <div class="card-icon">🔧</div>
+                    <h3>Full-Stack Solutions</h3>
+                    <p>From audits to builds to optimization. I don't just hand you dashboards—I partner with you to make data work for your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-container">
+            <h2 class="section-title">My Process</h2>
+            <div class="process-timeline">
+                <div class="timeline-item" data-step="1">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Audit & Discover</h3>
+                        <p>I analyze your current data infrastructure, identify gaps, and understand your business goals. This reveals what's working and what's broken.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-step="2">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Design & Plan</h3>
+                        <p>Based on the audit, I design a custom dashboard strategy that aligns with your revenue goals and marketing channels.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-step="3">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>Build & Implement</h3>
+                        <p>I build full-stack dashboards using BigQuery, Apps Script, and modern web technologies. Everything is scalable and production-ready.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-step="4">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Optimize & Scale</h3>
+                        <p>I continuously monitor performance, improve accuracy, and scale as your business grows. Your data system evolves with you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <h2 class="section-title">Services I Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Data Audits</h3>
+                    <p>Comprehensive analysis of your current data setup. I identify inefficiencies, data quality issues, and missed revenue opportunities.</p>
+                    <ul class="service-list">
+                        <li>Data infrastructure assessment</li>
+                        <li>Quality & accuracy review</li>
+                        <li>Revenue impact analysis</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Dashboard Design & Build</h3>
+                    <p>Custom-built dashboards designed specifically for your business. Web-based, interactive, and tied directly to revenue metrics.</p>
+                    <ul class="service-list">
+                        <li>Full-stack dashboard development</li>
+                        <li>BigQuery + Apps Script integration</li>
+                        <li>Real-time data automation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>System Optimization</h3>
+                    <p>Improve existing dashboards and data systems. Boost performance, accuracy, and actionability of your current setup.</p>
+                    <ul class="service-list">
+                        <li>Performance tuning</li>
+                        <li>Data pipeline optimization</li>
+                        <li>Feature enhancement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="demo" id="demo">
+        <div class="section-container">
+            <h2 class="section-title">See Data Intelligence In Action</h2>
+            <div class="demo-container">
+                <div class="demo-viz">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="demo-description">
+                    <h3>Revenue Growth Dashboard</h3>
+                    <p>This interactive chart shows typical client metrics I track. Real-time updates, multi-channel breakdown, and ROI visibility—all in one place.</p>
+                    <div class="demo-metrics">
+                        <div class="metric-item">
+                            <div class="metric-label">Current Month Revenue</div>
+                            <div class="metric-value">$45,231</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Month-over-Month Growth</div>
+                            <div class="metric-value">+18.5%</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Conversion Rate</div>
+                            <div class="metric-value">3.2%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="section-container">
+            <h2 class="section-title">Who I Work With</h2>
+            <div class="clients-grid">
+                <div class="client-type">
+                    <div class="client-icon">🏢</div>
+                    <h3>SMBs & Agencies</h3>
+                    <p>Growing businesses needing data-driven decisions and automated reporting.</p>
+                </div>
+                <div class="client-type">
+                    <div class="client-icon">📱</div>
+                    <h3>E-Commerce & Digital</h3>
+                    <p>Online retailers and digital brands tracking multi-channel performance.</p>
+                </div>
+                <div class="client-type">
+                    <div class="client-icon">💼</div>
+                    <h3>High-Ticket Coaches</h3>
+                    <p>Coaching and consulting businesses optimizing sales funnels and lead generation.</p>
+                </div>
+                <div class="client-type">
+                    <div class="client-icon">🤝</div>
+                    <h3>Nonprofits</h3>
+                    <p>Mission-driven organizations maximizing donor impact and program efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get Your Free Data Audit</h2>
+            <p class="contact-subtitle">No strings attached. I'll analyze your current data setup and share insights on where you can improve.</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Company">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tell me about your current data setup..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Request Free Audit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; 2024 AZ Digital. Revenue-driven data analytics.</p>
+            <div class="footer-links">
+                <a href="https://github.com/jayr-ai" target="_blank">GitHub</a>
+                <a href="mailto:jayveerespeto.ai@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

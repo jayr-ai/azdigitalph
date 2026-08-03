@@ -1,0 +1,30 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="50" fill="transparent"/>
+
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- AZ Logo Mark -->
+  <g>
+    <!-- Letter A -->
+    <path d="M 10 35 L 20 10 L 30 35 M 13 25 L 27 25" stroke="url(#logoGradient)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Letter Z -->
+    <path d="M 35 10 L 55 10 L 35 35 L 55 35" stroke="url(#logoGradient)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Data visualization dots -->
+    <circle cx="70" cy="15" r="2" fill="url(#logoGradient)"/>
+    <circle cx="80" cy="20" r="2" fill="url(#logoGradient)"/>
+    <circle cx="90" cy="12" r="2" fill="url(#logoGradient)"/>
+    <circle cx="100" cy="25" r="2" fill="url(#logoGradient)"/>
+  </g>
+
+  <!-- Text: Digital -->
+  <text x="70" y="40" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#ffffff" letter-spacing="0.5">Digital</text>
+</svg>
