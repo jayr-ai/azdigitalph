@@ -1,0 +1,124 @@
+<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Blue Gradient -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d9ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Data + Marketing Icon -->
+  <symbol id="icon-data-marketing" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Bar chart bars -->
+    <rect x="25" y="55" width="8" height="20" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <rect x="36" y="45" width="8" height="30" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <rect x="47" y="35" width="8" height="40" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <rect x="58" y="40" width="8" height="35" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <!-- Base line -->
+    <line x1="20" y1="75" x2="70" y2="75" stroke="url(#blueGradient)" stroke-width="2" filter="url(#glow)"/>
+  </symbol>
+
+  <!-- Revenue Focused Icon -->
+  <symbol id="icon-revenue" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Money bag -->
+    <circle cx="50" cy="48" r="18" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.9"/>
+    <path d="M 40 40 Q 40 35 50 35 Q 60 35 60 40" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.9"/>
+    <!-- Dollar sign -->
+    <text x="50" y="55" font-size="24" font-weight="bold" fill="#0a0a0a" text-anchor="middle" font-family="Arial">$</text>
+  </symbol>
+
+  <!-- Full-Stack Solutions Icon -->
+  <symbol id="icon-fullstack" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Layers/Stack -->
+    <rect x="28" y="32" width="44" height="12" rx="2" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+    <rect x="28" y="48" width="44" height="12" rx="2" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.9"/>
+    <rect x="28" y="64" width="44" height="12" rx="2" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+  </symbol>
+
+  <!-- Data Audits Icon -->
+  <symbol id="icon-audits" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Magnifying glass -->
+    <circle cx="42" cy="42" r="16" fill="none" stroke="url(#blueGradient)" stroke-width="3" filter="url(#glow)"/>
+    <line x1="54" y1="54" x2="68" y2="68" stroke="url(#blueGradient)" stroke-width="3" filter="url(#glow)"/>
+  </symbol>
+
+  <!-- Dashboard Design Icon -->
+  <symbol id="icon-dashboard" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Monitor/Dashboard -->
+    <rect x="25" y="28" width="50" height="32" rx="3" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" filter="url(#glow)"/>
+    <!-- Grid lines -->
+    <line x1="34" y1="35" x2="34" y2="55" stroke="url(#blueGradient)" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
+    <line x1="50" y1="35" x2="50" y2="55" stroke="url(#blueGradient)" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
+    <line x1="66" y1="35" x2="66" y2="55" stroke="url(#blueGradient)" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
+    <!-- Stand -->
+    <rect x="45" y="60" width="10" height="8" rx="1" fill="url(#blueGradient)" filter="url(#glow)"/>
+  </symbol>
+
+  <!-- System Optimization Icon -->
+  <symbol id="icon-optimization" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Lightning bolt -->
+    <path d="M 50 25 L 60 45 L 45 45 L 55 70 L 35 50 L 50 50 Z" fill="url(#blueGradient)" filter="url(#glow)"/>
+  </symbol>
+
+  <!-- SMBs & Agencies Icon -->
+  <symbol id="icon-smbs" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Building -->
+    <rect x="28" y="38" width="44" height="36" rx="2" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" filter="url(#glow)"/>
+    <!-- Windows -->
+    <rect x="34" y="44" width="6" height="6" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+    <rect x="45" y="44" width="6" height="6" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+    <rect x="56" y="44" width="6" height="6" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+    <rect x="34" y="56" width="6" height="6" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+    <rect x="45" y="56" width="6" height="6" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+    <rect x="56" y="56" width="6" height="6" fill="url(#blueGradient)" filter="url(#glow)" opacity="0.8"/>
+  </symbol>
+
+  <!-- E-Commerce Icon -->
+  <symbol id="icon-ecommerce" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Phone -->
+    <rect x="38" y="28" width="24" height="44" rx="3" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" filter="url(#glow)"/>
+    <!-- Screen grid -->
+    <circle cx="44" cy="40" r="2.5" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <circle cx="50" cy="40" r="2.5" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <circle cx="56" cy="40" r="2.5" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <circle cx="44" cy="48" r="2.5" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <circle cx="50" cy="48" r="2.5" fill="url(#blueGradient)" filter="url(#glow)"/>
+    <circle cx="56" cy="48" r="2.5" fill="url(#blueGradient)" filter="url(#glow)"/>
+  </symbol>
+
+  <!-- High-Ticket Coaches Icon -->
+  <symbol id="icon-coaches" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Briefcase -->
+    <rect x="30" y="42" width="40" height="26" rx="2" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" filter="url(#glow)"/>
+    <!-- Handle -->
+    <path d="M 40 42 Q 40 32 50 32 Q 60 32 60 42" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" filter="url(#glow)"/>
+    <!-- Lock -->
+    <circle cx="50" cy="55" r="3" fill="url(#blueGradient)" filter="url(#glow)"/>
+  </symbol>
+
+  <!-- Nonprofits Icon -->
+  <symbol id="icon-nonprofits" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.2"/>
+    <!-- Handshake -->
+    <path d="M 35 55 Q 35 40 45 35 Q 55 30 60 40 Q 65 50 55 60 Q 45 65 35 55" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" filter="url(#glow)" stroke-linecap="round"/>
+    <path d="M 65 55 Q 65 40 55 35 Q 45 30 40 40 Q 35 50 45 60 Q 55 65 65 55" fill="none" stroke="url(#blueGradient)" stroke-width="2.5" filter="url(#glow)" stroke-linecap="round"/>
+  </symbol>
+</svg>
