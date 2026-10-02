@@ -43,11 +43,16 @@ Replace `'#book'` with your booking link, for example `'https://calendly.com/you
 
 ## 3. Swap the photo
 
-1. Save your photo as `assets/img/jayvee.jpg`.
-2. Open `script.js` and set `PHOTO_URL: 'assets/img/jayvee.jpg'` in the `CONFIG` block at the top.
-3. Refresh the page.
+The About photo is made of four files in `assets/img/`:
 
-The photo replaces the "JR" placeholder automatically. (The page does not look for the file until you set this, so there are no errors while the photo is missing.) A portrait about 680 × 850 pixels (4:5) works best. Keep the file under about 200 KB so the page stays fast.
+| File | Size |
+|---|---|
+| `jayvee.jpg` | 680 × 850 px |
+| `jayvee@2x.jpg` | 1360 × 1700 px |
+| `jayvee.webp` | 680 × 850 px |
+| `jayvee@2x.webp` | 1360 × 1700 px |
+
+To use a new photo, export it at those sizes (a 4:5 portrait) and save over the four files with the same names. Keep each under about 200 KB. Update the `alt` text on the `<img>` in the About section of `index.html` so it describes the new photo.
 
 ## 4. Edit the copy
 
@@ -81,6 +86,5 @@ Rules for demo data:
 ## Before you publish
 
 - Set `BOOKING_URL` (section 2).
-- Add your photo (section 3).
 - Keep `reference/` out of the repository. It is already listed in `.gitignore`.
 - Deployment to `azdigitalph.com` happens last. Do not point the domain until you have approved the final site, and make sure the old site is archived first.

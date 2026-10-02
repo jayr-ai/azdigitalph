@@ -230,8 +230,12 @@
 <!-- 9. ABOUT -->
 <section id="about">
   <div class="wrap about-grid">
-    <!-- Photo: save assets/img/jayvee.jpg and set PHOTO_URL in script.js (see README). -->
-    <div class="photo reveal" id="photo" role="img" aria-label="Photo of Jayvee Respeto coming soon"><span aria-hidden="true">JR</span></div>
+    <div class="photo reveal">
+      <picture>
+        <source type="image/webp" srcset="assets/img/jayvee.webp 1x, assets/img/jayvee@2x.webp 2x">
+        <img src="assets/img/jayvee.jpg" srcset="assets/img/jayvee.jpg 1x, assets/img/jayvee@2x.jpg 2x" width="680" height="850" loading="lazy" decoding="async" alt="Jayvee Respeto, founder of AZ Digital PH, seated at a laptop and reading a book, wearing a red polo shirt">
+      </picture>
+    </div>
     <div class="reveal">
       <p class="eyebrow">About</p>
       <h2>The person behind your reporting.</h2>

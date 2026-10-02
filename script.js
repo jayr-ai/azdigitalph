@@ -3,8 +3,6 @@ const CONFIG = {
   // Set this to the booking tool link when it is ready.
   // While it is "#book", every Book a Call button scrolls to the final call-to-action.
   BOOKING_URL: '#book',
-  // Path to your photo once you have saved it, for example 'assets/img/jayvee.jpg'. Leave empty to show the placeholder.
-  PHOTO_URL: '',
 };
 
 (function () {
@@ -83,19 +81,6 @@ const CONFIG = {
       var fio = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { loadFrame(demoFrame); fio.disconnect(); } }, { rootMargin: '600px 0px' });
       fio.observe(demoFrame);
     } else { loadFrame(demoFrame); }
-  }
-
-  // Photo: when CONFIG.PHOTO_URL is set it replaces the initials placeholder. No HTML edit needed.
-  var photoBox = document.getElementById('photo');
-  if (photoBox && CONFIG.PHOTO_URL) {
-    var probe = new Image();
-    probe.onload = function () {
-      probe.alt = 'Jayvee Respeto, founder of AZ Digital PH, in a professional portrait';
-      probe.width = probe.naturalWidth; probe.height = probe.naturalHeight; probe.decoding = 'async';
-      photoBox.removeAttribute('role'); photoBox.removeAttribute('aria-label');
-      photoBox.innerHTML = ''; photoBox.appendChild(probe);
-    };
-    probe.src = CONFIG.PHOTO_URL;
   }
 
   // FAQ: keep one answer open at a time.
