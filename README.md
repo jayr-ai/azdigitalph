@@ -1,188 +1,86 @@
-# AZ Digital - Premium Portfolio Website
+# AZ Digital PH sales page
 
-A stunning, interactive 3D landing page for AZ Digital analytics portfolio. Features smooth animations, interactive visualizations, and professional design.
+A single long-form sales page for AZ Digital PH, plus an interactive demo of eight client dashboards and a Meta Ads audit report. It is plain HTML, CSS and JavaScript. There is no build step, no analytics and no cookies.
 
-## Features
+All demo data is **sample data** for two fictional brands (Summit Growth Academy and Harbor & Pine Co.). No real client names, staff names or figures are used anywhere.
 
-- ✨ Smooth scroll animations with parallax effects
-- 🎨 3D rotating data cube visualization (Three.js)
-- 📊 Interactive revenue chart demo (Chart.js)
-- 💼 Fully responsive design
-- ⚡ Performance optimized
-- 🎯 Conversion-focused CTA
-- 📧 Email capture form (ready for MailerLite integration)
+## What is in the folder
 
-## Project Structure
+| Path | What it is |
+|---|---|
+| `index.html`, `styles.css`, `script.js` | The sales page |
+| `demo/` | The demo hub (opens at `/demo/`) |
+| `demo/data/` | One data file per dashboard, generated from fixed seeds |
+| `assets/` | Icons, social image and the photo |
+| `copy.md` | The approved page copy, kept as a reference |
+| `serve.js` | A small preview server (see below) |
+| `CNAME` | Tells GitHub Pages to serve the site at `azdigitalph.com` |
+| `reference/` | Your private screenshots. This folder is **git-ignored** and is never published |
 
-```
-azdigitalph/
-├── index.html          # Main landing page
-├── css/
-│   └── style.css       # All styles and animations
-├── js/
-│   └── main.js         # Interactive features (3D, charts, forms)
-├── assets/
-│   ├── logo.png        # Add your logo here
-│   ├── hero-bg.jpg     # Hero background
-│   └── [1-4].jpg       # Brand mockup images
-├── package.json
-└── .github/
-    └── workflows/
-        └── deploy.yml  # GitHub Pages auto-deploy
-```
+## 1. Preview the site on your computer
 
-## Quick Start
-
-### Local Development
+You need Node.js installed. From the site folder, run:
 
 ```bash
-# Start local server
-python -m http.server 8000
-
-# Open http://localhost:8000 in your browser
+node serve.js
 ```
 
-### Adding Your Brand Assets
+Then open <http://localhost:5173>. The demo is at <http://localhost:5173/demo/>. Press `Ctrl+C` to stop.
 
-1. Download your branding files from Google Drive
-2. Place them in the `assets/` folder:
-   - `logo.png` - Your logo (recommended: 200x50px)
-   - `hero-bg.jpg` - Hero section background
-   - `1.jpg`, `2.jpg`, `3.jpg`, `4.jpg` - Brand mockup images
+Any static file server also works, for example the Live Server extension in VS Code. Opening `index.html` directly from the folder will not load the demo correctly, so use a server.
 
-3. Update image references in `index.html` if needed
+## 2. Set the booking link (`BOOKING_URL`)
 
-## GitHub Pages Deployment
+Open `script.js`. At the very top you will see:
 
-### Initial Setup
-
-```bash
-# Initialize and push to GitHub
-cd azdigitalph
-git add .
-git commit -m "Initial commit: AZ Digital portfolio"
-git remote add origin https://github.com/jayr-ai/azdigitalph.git
-git branch -M main
-git push -u origin main
+```js
+const CONFIG = {
+  BOOKING_URL: '#book',
+};
 ```
 
-### Enable GitHub Pages
+Replace `'#book'` with your booking link, for example `'https://calendly.com/your-link'`. Every **Book a Call** button on the page uses this one value. While it is still `'#book'`, the buttons scroll to the closing section, so the page never shows a broken link. Real links open in a new tab.
 
-1. Go to your GitHub repo: https://github.com/jayr-ai/azdigitalph
-2. Settings → Pages
-3. Select "main" branch as source
-4. Save
+## 3. Swap the photo
 
-Your site will be live at: `https://jayr-ai.github.io/azdigitalph`
+1. Save your photo as `assets/img/jayvee.jpg`.
+2. Open `script.js` and set `PHOTO_URL: 'assets/img/jayvee.jpg'` in the `CONFIG` block at the top.
+3. Refresh the page.
 
-### Connect Custom Domain (azdigitalph.com)
+The photo replaces the "JR" placeholder automatically. (The page does not look for the file until you set this, so there are no errors while the photo is missing.) A portrait about 680 × 850 pixels (4:5) works best. Keep the file under about 200 KB so the page stays fast.
 
-1. In GitHub Pages settings, add "azdigitalph.com" as custom domain
-2. Go to your domain registrar (GoDaddy, Namecheap, etc.)
-3. Add DNS records:
-   - Type: A
-   - Name: @
-   - Value: 185.199.108.153
-   - Also add: 185.199.109.153, 185.199.110.153, 185.199.111.153
-4. Or add CNAME if using www:
-   - Type: CNAME
-   - Name: www
-   - Value: jayr-ai.github.io
+## 4. Edit the copy
 
-## Email Form Integration
+The page text lives directly in `index.html`. Open it and find the section by its comment, such as `<!-- 6. WHAT YOU GET -->`, then edit the words between the tags. `copy.md` is the reference version of the text. If you change the page wording, update `copy.md` too so the two stay in step.
 
-The contact form currently stores submissions in browser's localStorage. To set up email notifications:
+Headline and description tags for search results and link previews are at the top of `index.html`, in the `<head>`.
 
-### Option 1: MailerLite (Recommended)
-```javascript
-// In js/main.js, replace email sending with:
-// Get MailerLite API key from https://app.mailerlite.com/integrations/api
-const mailerliteKey = 'YOUR_API_KEY';
-// Send to your form
-```
+If you change the headline, the social preview image (`assets/img/og.png`) still shows the old one. Ask for a refreshed image, or edit it and save it as a 1200 × 630 PNG with the same name.
 
-### Option 2: Formspree
-1. Go to https://formspree.io
-2. Create new form for azdigitalph.com
-3. Replace form action in index.html:
-```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
+## 5. Add a testimonial later
 
-### Option 3: Sendgrid / Email Service
-Update the contact form handler in `js/main.js`
+There are no testimonials yet, so there is no testimonial section on the page. A ready-made one is in `index.html`, commented out, just below the About section (search for `TESTIMONIAL COMPONENT`).
 
-## Customization
+1. Replace the placeholder quote, name and role with a real, approved testimonial.
+2. Delete the `<!--` line above the section and the `-->` line below it.
+3. Add more `<figure class="card">` blocks for more testimonials.
 
-### Colors
-Edit CSS variables in `css/style.css`:
-```css
-:root {
-    --primary-color: #0066ff;      /* Blue */
-    --secondary-color: #ff0055;    /* Pink */
-    --accent-color: #00d9ff;       /* Cyan */
-    --bg-dark: #0a0e27;           /* Dark background */
-    /* ... */
-}
-```
+Only use real testimonials that the client has agreed to.
 
-### Text Content
-Edit copy in `index.html` directly. All content is in HTML, easy to update.
+## 6. Add a new demo dashboard
 
-### 3D Animation
-The Three.js scene in `js/main.js` creates a rotating cube. To customize:
-- Change cube size: `new THREE.BoxGeometry(3, 3, 3)` → adjust the numbers
-- Change rotation speed: `cube.rotation.x += 0.003` → increase for faster spin
-- Change colors: Modify the `canvas2d` gradient colors
+1. **Data.** Create `demo/data/yourname.js`. Follow the pattern of the existing files: read from `window.Summit` (or build your own seeded data with `DemoCore.rng`) and expose a `query(from, to, gran)` function.
+2. **View.** In one of the `demo/views-*.js` files, add `V.yourname = function (ctx) { ... }`. Return `{ html: '...', mount: function () { ...draw charts... } }`. The helpers in `demo/ui.js` (`UI.kpis`, `UI.card`, `UI.table`, `UI.mount`) do most of the work.
+3. **Register.** In `demo/index.html`, add `<script defer src="data/yourname.js"></script>` before `ui.js`. In `demo/hub.js`, add an entry to the `DASH` list: `{ id: 'yourname', nav: 'Menu name', brand: 'Brand line', ctl: true }`. Set `ctl: false` if the dashboard has its own controls.
 
-## Performance Notes
+Rules for demo data:
+- Use fictional names only.
+- Keep the numbers consistent (leads are not more than clicks, cash is not more than revenue, parts add up to totals).
+- Show "No data" when a value is missing. Never show a quiet `$0`.
 
-- Uses CDN libraries (Three.js, Chart.js) - no build step needed
-- Static HTML/CSS/JS - serves instantly
-- Optimized animations - 60fps on all devices
-- Lazy-loads visualizations on scroll
+## Before you publish
 
-## Analytics & Tracking
-
-Add Google Analytics, Hotjar, or similar by adding to `index.html` head:
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_ID"></script>
-```
-
-## Browser Support
-
-- Chrome/Edge: Full support
-- Firefox: Full support
-- Safari: Full support
-- Mobile browsers: Full support (responsive design)
-
-## Troubleshooting
-
-**3D cube not showing?**
-- Check Three.js CDN is loading (check browser console)
-- Ensure WebGL is supported in your browser
-
-**Chart not displaying?**
-- Verify Chart.js CDN is loaded
-- Check console for any errors
-
-**Forms not submitting?**
-- Check browser console for errors
-- Ensure email service is configured
-
-## Next Steps
-
-1. ✅ Add your logo and brand images to `assets/`
-2. ✅ Push to GitHub and enable GitHub Pages
-3. ✅ Connect azdigitalph.com domain
-4. ✅ Set up email form integration
-5. ✅ Add Google Analytics
-6. ✅ Customize colors to match your brand
-
-## Support
-
-For issues or customizations, contact: jayveerespeto.ai@gmail.com
-
----
-
-**Built with ❤️ by AZ Digital**
+- Set `BOOKING_URL` (section 2).
+- Add your photo (section 3).
+- Keep `reference/` out of the repository. It is already listed in `.gitignore`.
+- Deployment to `azdigitalph.com` happens last. Do not point the domain until you have approved the final site, and make sure the old site is archived first.

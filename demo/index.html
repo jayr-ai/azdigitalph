@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live demo · AZ Digital PH client dashboards</title>
+<meta name="description" content="Interactive demo of client reporting dashboards built by AZ Digital PH. All data shown is sample data from fictional brands.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0B0E11">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500..600&family=Inter:wght@400..600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500..600&family=Inter:wght@400..600&display=swap"></noscript>
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><span>Dashboard hub</span><span class="badge">Sample data</span></div>
+    <nav id="nav" aria-label="Demo dashboards"></nav>
+    <div class="side-foot">Live demo · sample data from fictional brands. Real client dashboards are private.</div>
+  </aside>
+  <div class="main-wrap">
+    <header class="top">
+      <div><div class="eyebrow" id="brandline"></div><h1 id="title"></h1></div>
+      <div class="top-r">
+        <div class="controls" id="ctl-range">
+          <label class="sr-only" for="preset">Date range</label>
+          <select id="preset"></select>
+          <label class="sr-only" for="from">From</label><input type="date" id="from">
+          <span class="sep" aria-hidden="true">to</span>
+          <label class="sr-only" for="to">To</label><input type="date" id="to">
+          <div class="gran" role="group" aria-label="Granularity" id="gran"></div>
+        </div>
+        <span class="badge" id="sample-badge">Sample data</span>
+      </div>
+    </header>
+    <main id="view" tabindex="-1" aria-live="polite"></main>
+  </div>
+</div>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="data/core.js"></script>
+<script defer src="data/summit.js"></script>
+<script defer src="data/marketing.js"></script>
+<script defer src="data/sales.js"></script>
+<script defer src="data/revenue.js"></script>
+<script defer src="data/pnl.js"></script>
+<script defer src="data/executive.js"></script>
+<script defer src="data/masterclass.js"></script>
+<script defer src="data/assessment.js"></script>
+<script defer src="data/ceo.js"></script>
+<script defer src="data/audit.js"></script>
+<script defer src="ui.js"></script>
+<script defer src="views-a.js"></script>
+<script defer src="views-b.js"></script>
+<script defer src="views-c.js"></script>
+<script defer src="hub.js"></script>
+</body>
+</html>

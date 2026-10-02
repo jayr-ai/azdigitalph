@@ -1,283 +1,327 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZ Digital - Revenue-Driven Data Analytics</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AZ Digital PH · Client reporting and dashboards for agencies</title>
+<meta name="description" content="A reporting partner for agencies and media buyers. Custom client dashboards that connect ad spend to booked calls, sales and cash collected, built and maintained for you.">
+<link rel="canonical" href="https://azdigitalph.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://azdigitalph.com/">
+<meta property="og:title" content="You run the ads. I'll handle the reporting.">
+<meta property="og:description" content="Custom client dashboards for agencies and media buyers, built in month one and maintained every month after.">
+<meta property="og:image" content="https://azdigitalph.com/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AZ Digital PH: You run the ads. I'll handle the reporting.">
+<meta property="og:site_name" content="AZ Digital PH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="You run the ads. I'll handle the reporting.">
+<meta name="twitter:description" content="Custom client dashboards for agencies and media buyers, built in month one and maintained every month after.">
+<meta name="twitter:image" content="https://azdigitalph.com/assets/img/og.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0E11">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500..600&family=Inter:wght@400..600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500..600&family=Inter:wght@400..600&display=swap"></noscript>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="assets/logo.svg" alt="AZ Digital" class="logo-img">
-            </div>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#process" class="nav-link">Process</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#demo" class="nav-link">Demo</a>
-                <a href="#contact" class="nav-link cta-link">Get Free Audit</a>
-            </div>
-        </div>
-    </nav>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title hero-word">
-                    Revenue-Driven <span class="gradient-text">Data</span> Intelligence
-                </h1>
-                <p class="hero-subtitle hero-word" style="animation-delay: 0.1s">
-                    I don't just build dashboards. I audit your data, uncover what's actually working, and build systems that drive measurable revenue growth.
-                </p>
-                <div class="hero-cta hero-word" style="animation-delay: 0.2s">
-                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Start Your Free Audit</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('process')">See My Process</button>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat hero-word" style="animation-delay: 0.5s">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Dashboard Systems Built</div>
-                    </div>
-                    <div class="stat hero-word" style="animation-delay: 0.6s">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Years Marketing Experience</div>
-                    </div>
-                    <div class="stat hero-word" style="animation-delay: 0.7s">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Revenue Growth Potential</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="AZ Digital PH, back to top">AZ <span>Digital</span> PH</a>
+    <a class="btn btn-sm" href="#book" data-book>Book a Call</a>
+  </div>
+</header>
 
-    <!-- About Section (Why Different) -->
-    <section class="about" id="about">
-        <div class="section-container">
-            <h2 class="section-title">Why I'm Different</h2>
-            <div class="about-grid">
-                <div class="about-card parallax-card" style="--index: 0">
-                    <svg class="card-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-data-marketing"></use>
-                    </svg>
-                    <h3>Data + Marketing</h3>
-                    <p>I'm not just an analyst—I have deep digital marketing expertise. I know what healthy metrics look like and can spot red flags most analysts miss.</p>
-                </div>
-                <div class="about-card parallax-card" style="--index: 1">
-                    <svg class="card-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-revenue"></use>
-                    </svg>
-                    <h3>Revenue Focused</h3>
-                    <p>Everything ties back to business impact. Every dashboard, every metric, every insight is designed to increase your bottom line.</p>
-                </div>
-                <div class="about-card parallax-card" style="--index: 2">
-                    <svg class="card-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-fullstack"></use>
-                    </svg>
-                    <h3>Full-Stack Solutions</h3>
-                    <p>From audits to builds to optimization. I don't just hand you dashboards—I partner with you to make data work for your business.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<main id="main">
 
-    <!-- Process Section -->
-    <section class="process" id="process">
-        <div class="section-container">
-            <h2 class="section-title">My Process</h2>
-            <div class="process-timeline">
-                <div class="timeline-item" data-step="1">
-                    <div class="timeline-number">01</div>
-                    <div class="timeline-content">
-                        <h3>Audit & Discover</h3>
-                        <p>I analyze your current data infrastructure, identify gaps, and understand your business goals. This reveals what's working and what's broken.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-step="2">
-                    <div class="timeline-number">02</div>
-                    <div class="timeline-content">
-                        <h3>Design & Plan</h3>
-                        <p>Based on the audit, I design a custom dashboard strategy that aligns with your revenue goals and marketing channels.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-step="3">
-                    <div class="timeline-number">03</div>
-                    <div class="timeline-content">
-                        <h3>Build & Implement</h3>
-                        <p>I build full-stack dashboards using BigQuery, Apps Script, and modern web technologies. Everything is scalable and production-ready.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-step="4">
-                    <div class="timeline-number">04</div>
-                    <div class="timeline-content">
-                        <h3>Optimize & Scale</h3>
-                        <p>I continuously monitor performance, improve accuracy, and scale as your business grows. Your data system evolves with you.</p>
-                    </div>
-                </div>
-            </div>
+<!-- 1. HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Reporting partner for agencies and media buyers</p>
+      <h1>You run the ads. I'll handle the reporting.</h1>
+      <p class="sub">I build and maintain the client dashboards your agency needs. One view that connects ad spend to booked calls, sales and cash collected, refreshed and checked before your client thinks to ask.</p>
+      <div class="cta-row">
+        <a class="btn btn-lg" href="#book" data-book>Book a Call</a>
+        <a class="text-link" href="#demo">See a live demo ↓</a>
+      </div>
+      <p class="note">A free Meta Ads audit report on one of your client accounts comes with every booked call.</p>
+    </div>
+    <div class="frame" aria-hidden="true" inert>
+      <div class="frame-bar"><i></i><i></i><i></i><span class="url">reports.youragency.com</span></div>
+      <div class="hero-demo" id="hero-demo">
+      <div class="frame-body">
+        <div class="mock-top"><span>Marketing overview</span><span class="badge">Sample data</span></div>
+        <div class="mock-kpis">
+          <div class="mock-kpi"><small>Ad spend</small><b>$18,420</b></div>
+          <div class="mock-kpi"><small>Booked calls</small><b>212</b></div>
+          <div class="mock-kpi"><small>Cash collected</small><b>$96,300</b></div>
+          <div class="mock-kpi gold"><small>ROAS</small><b>5.2x</b></div>
         </div>
-    </section>
+        <div class="mock-bars"><span style="height:40%"></span><span style="height:55%"></span><span style="height:48%"></span><span style="height:70%"></span><span style="height:62%"></span><span style="height:80%"></span><span style="height:74%"></span><span style="height:92%"></span></div>
+      </div>
+      <iframe title="" tabindex="-1" data-src="demo/index.html?hero=1#executive"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-container">
-            <h2 class="section-title">Services I Offer</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-audits"></use>
-                    </svg>
-                    <h3>Data Audits</h3>
-                    <p>Comprehensive analysis of your current data setup. I identify inefficiencies, data quality issues, and missed revenue opportunities.</p>
-                    <ul class="service-list">
-                        <li>Data infrastructure assessment</li>
-                        <li>Quality & accuracy review</li>
-                        <li>Revenue impact analysis</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-dashboard"></use>
-                    </svg>
-                    <h3>Dashboard Design & Build</h3>
-                    <p>Custom-built dashboards designed specifically for your business. Web-based, interactive, and tied directly to revenue metrics.</p>
-                    <ul class="service-list">
-                        <li>Full-stack dashboard development</li>
-                        <li>BigQuery + Apps Script integration</li>
-                        <li>Real-time data automation</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-optimization"></use>
-                    </svg>
-                    <h3>System Optimization</h3>
-                    <p>Improve existing dashboards and data systems. Boost performance, accuracy, and actionability of your current setup.</p>
-                    <ul class="service-list">
-                        <li>Performance tuning</li>
-                        <li>Data pipeline optimization</li>
-                        <li>Feature enhancement</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 2. PROBLEM -->
+<section class="alt" id="problem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The problem</p>
+      <h2>Good media buying, reported badly, looks like bad media buying.</h2>
+      <p>Your client decides whether your work is paying off by reading a report. In most agencies, that report is the weakest part of the service. It usually breaks in one of four places.</p>
+    </div>
+    <div class="grid two">
+      <article class="card reveal"><span class="num">01</span><h3>Hours lost to manual reporting</h3><p>Every week, someone on your team opens Ads Manager, the CRM and Stripe in three tabs and copies numbers into a spreadsheet or a slide deck. It takes hours. Mistakes slip in. Next week, it starts again. That time should go into the accounts, not into the paperwork about the accounts.</p></article>
+      <article class="card reveal"><span class="num">02</span><h3>Numbers that don't match</h3><p>Meta reports one lead count. The CRM reports another. Your client notices, and the next call is spent explaining the gap instead of the results. Even when the campaign is working, the conversation is about whose number is right.</p></article>
+      <article class="card reveal"><span class="num">03</span><h3>Clients who can't see the results</h3><p>Your client wants to know one thing: did the money come back? If they can't follow the line from ad spend to booked calls to sales to cash in the bank, they start to doubt the work. Doubt is how retainers end, often with no warning.</p></article>
+      <article class="card reveal"><span class="num">04</span><h3>No view of profit</h3><p>Most reporting stops at cost per lead and ROAS. Those numbers matter, but they don't answer the owner's real question. Nobody can show what the ads actually returned once cash collected and costs are counted.</p></article>
+    </div>
+  </div>
+</section>
 
-    <!-- Interactive Demo Section -->
-    <section class="demo" id="demo">
-        <div class="section-container">
-            <h2 class="section-title">See Data Intelligence In Action</h2>
-            <div class="demo-container">
-                <div class="demo-viz">
-                    <canvas id="revenueChart"></canvas>
-                </div>
-                <div class="demo-description">
-                    <h3>Revenue Growth Dashboard</h3>
-                    <p>This interactive chart shows typical client metrics I track. Real-time updates, multi-channel breakdown, and ROI visibility—all in one place.</p>
-                    <div class="demo-metrics">
-                        <div class="metric-item">
-                            <div class="metric-label">Current Month Revenue</div>
-                            <div class="metric-value">$45,231</div>
-                        </div>
-                        <div class="metric-item">
-                            <div class="metric-label">Month-over-Month Growth</div>
-                            <div class="metric-value">+18.5%</div>
-                        </div>
-                        <div class="metric-item">
-                            <div class="metric-label">Conversion Rate</div>
-                            <div class="metric-value">3.2%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 3. COST -->
+<section id="cost">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What it costs</p>
+      <h2>Weak reporting costs more than the hours it takes.</h2>
+      <p>The time spent building reports is the cost you can see. The larger costs are harder to spot until they arrive.</p>
+    </div>
+    <div class="grid three">
+      <article class="card reveal"><h3>Lost time</h3><p>Senior people end up doing data entry. Every hour spent copying numbers is an hour not spent on creative, testing or a new client. As the client list grows, the reporting work grows with it.</p></article>
+      <article class="card reveal"><h3>Lost trust</h3><p>When the numbers don't line up, the client stops trusting all of them, including the good ones. Your best results get questioned because the report around them looks unreliable.</p></article>
+      <article class="card reveal"><h3>Lost retainers</h3><p>Clients rarely leave because of one bad week. They leave because they could never clearly see what they were paying for. A client who can see the return has a reason to stay. A client who can't is waiting for a reason to go.</p></article>
+    </div>
+  </div>
+</section>
 
-    <!-- Clients Section -->
-    <section class="clients">
-        <div class="section-container">
-            <h2 class="section-title">Who I Work With</h2>
-            <div class="clients-grid">
-                <div class="client-type">
-                    <svg class="client-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-smbs"></use>
-                    </svg>
-                    <h3>SMBs & Agencies</h3>
-                    <p>Growing businesses needing data-driven decisions and automated reporting.</p>
-                </div>
-                <div class="client-type">
-                    <svg class="client-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-ecommerce"></use>
-                    </svg>
-                    <h3>E-Commerce & Digital</h3>
-                    <p>Online retailers and digital brands tracking multi-channel performance.</p>
-                </div>
-                <div class="client-type">
-                    <svg class="client-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-coaches"></use>
-                    </svg>
-                    <h3>High-Ticket Coaches</h3>
-                    <p>Coaching and consulting businesses optimizing sales funnels and lead generation.</p>
-                </div>
-                <div class="client-type">
-                    <svg class="client-icon" viewBox="0 0 100 100" width="50" height="50">
-                        <use href="assets/icons.svg#icon-nonprofits"></use>
-                    </svg>
-                    <h3>Nonprofits</h3>
-                    <p>Mission-driven organizations maximizing donor impact and program efficiency.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 4. NEW WAY -->
+<section class="alt" id="new-way">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The new way</p>
+      <h2>A reporting department, without hiring one.</h2>
+      <p>You keep doing what you were hired for: running the ads. I take over the reporting layer. That means connecting each client's platforms, building the dashboards, checking the data and keeping everything running as platforms change.</p>
+      <p>Your client gets a single place to see spend, leads, booked calls, sales and cash collected, with the same numbers every time they look. You get your hours back and a report that supports your work instead of undermining it.</p>
+    </div>
+    <div class="table-scroll reveal">
+      <table>
+        <caption class="sr-only" style="position:absolute;left:-999px">Three ways to handle client reporting</caption>
+        <thead><tr><th scope="col"></th><th scope="col">Do it yourself</th><th scope="col">Hire an in-house analyst</th><th scope="col" class="us">Partner with AZ Digital PH</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Who does the work</th><td>You or your media buyers, between campaigns</td><td>A new hire you recruit, train and manage</td><td class="us">A dedicated reporting partner</td></tr>
+          <tr><th scope="row">What it costs you</th><td>Billable hours and focus</td><td>Salary, tools and management time</td><td class="us">A monthly partnership, scoped on the call</td></tr>
+          <tr><th scope="row">When a platform changes</th><td>Reports break until someone has time to fix them</td><td>Depends on one person's availability</td><td class="us">Fixes are part of the partnership</td></tr>
+          <tr><th scope="row">What the client sees</th><td>Spreadsheets and screenshots</td><td>Depends on the analyst's skill set</td><td class="us">Custom web dashboards with your branding</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-container">
-            <h2 class="section-title">Get Your Free Data Audit</h2>
-            <p class="contact-subtitle">No strings attached. I'll analyze your current data setup and share insights on where you can improve.</p>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Phone Number" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Your Company">
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Tell me about your current data setup..." rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-large">Request Free Audit</button>
-            </form>
-        </div>
-    </section>
+<!-- 5. LIVE DEMO -->
+<section id="demo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Live demo</p>
+      <h2>Click around. This is what your clients would see.</h2>
+      <p>These are rebuilds of real client dashboards, filled with sample data from two fictional brands: a coaching academy and an e-commerce store. Change the date range or switch from weeks to months, and every number updates.</p>
+    </div>
+    <div class="demo-label reveal"><span>Live demo · sample data. Real client dashboards are private.</span><a class="text-link" href="demo/">Open full screen →</a></div>
+    <div class="frame reveal">
+      <div class="frame-bar"><i></i><i></i><i></i><span class="url">reports.youragency.com</span></div>
+      <iframe class="demo-frame" id="demo-frame" title="Interactive demo dashboards using sample data" data-src="demo/index.html?embed=1#executive"></iframe>
+      <noscript><p class="demo-slot">The interactive demo needs JavaScript. <a class="text-link" href="demo/">Open the demo</a>.</p></noscript>
+    </div>
+    <div class="chips reveal" aria-label="Dashboards in the demo">
+      <span class="chip">Executive Summary</span><span class="chip">Marketing</span><span class="chip">Sales and Pipeline</span><span class="chip">Revenue</span><span class="chip">Webinar Funnel</span><span class="chip">Lead Quiz</span><span class="chip">E-commerce CEO View</span><span class="chip">Profit and Loss</span>
+    </div>
+    <p class="caption">Every dashboard is built around the client's own funnel. These eight are examples, not a fixed menu.</p>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="section-container">
-            <p>&copy; 2024 AZ Digital. Revenue-driven data analytics.</p>
-            <div class="footer-links">
-                <a href="https://github.com/jayr-ai" target="_blank">GitHub</a>
-                <a href="mailto:jayveerespeto.ai@gmail.com">Email</a>
-            </div>
-        </div>
-    </footer>
+<!-- 6. WHAT YOU GET -->
+<section class="alt" id="what-you-get">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What you get</p>
+      <h2>A build in month one. A partner every month after.</h2>
+    </div>
+    <div class="grid two">
+      <article class="card reveal">
+        <span class="num">Month 1</span><h3>The build</h3>
+        <ul>
+          <li><strong>Data audit.</strong> I review every data source your client uses, how it's connected and where the numbers disagree.</li>
+          <li><strong>Custom dashboard build.</strong> A client dashboard, or a set of dashboards, wired to your client's real platforms and designed around how they sell.</li>
+          <li><strong>Reconciled numbers.</strong> Where platforms disagree, the dashboard shows both figures and explains the gap, so nobody is surprised on a call.</li>
+          <li><strong>Your branding.</strong> Your agency's logo, colours and web address. No AZ Digital PH branding is visible to your client.</li>
+          <li><strong>Handover.</strong> A walkthrough for you and, if you want, for your client.</li>
+        </ul>
+      </article>
+      <article class="card reveal">
+        <span class="num">Month 2 onward</span><h3>The ongoing partnership</h3>
+        <ul>
+          <li><strong>Refreshes and data checks.</strong> Data is refreshed and checked on a schedule, so problems are caught before your client sees them.</li>
+          <li><strong>Fixes when platforms change.</strong> When an ad platform, CRM or payment tool changes, I update the connection.</li>
+          <li><strong>New metrics and views on request.</strong> As your client's offer or funnel changes, the reporting changes with it.</li>
+          <li><strong>A reporting partner you can rely on.</strong> One person who knows your clients' data and answers your questions about it.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="platforms reveal" aria-label="Platforms I work with">
+      <span class="chip">Meta Ads</span><span class="chip">Google Ads</span><span class="chip">GoHighLevel</span><span class="chip">Stripe</span><span class="chip">Shopify</span><span class="chip">Amazon</span><span class="chip">Walmart</span><span class="chip">Google Sheets</span><span class="chip">Looker Studio</span><span class="chip">BigQuery</span><span class="chip">Google Apps Script</span><span class="chip">Custom web dashboards</span>
+    </div>
+    <p class="caption">Pricing is tailored to your client load and covered on the call.</p>
+  </div>
+</section>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <script src="js/main.js"></script>
+<!-- 7. HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>Four steps from first call to finished dashboard.</h2>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><h3>Book a call</h3><p>We talk through your clients, the platforms they use and where reporting is breaking down today.</p></li>
+      <li class="reveal"><h3>Get your free Meta Ads audit report</h3><p>I prepare an audit report on one of your client accounts, so you can judge the quality of my work before you commit.</p></li>
+      <li class="reveal"><h3>Month 1: the build</h3><p>I audit the data sources, build the dashboards and hand them over under your brand.</p></li>
+      <li class="reveal"><h3>Ongoing partnership</h3><p>From month two, I keep the reporting accurate, current and growing with your clients.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8. FIT -->
+<section class="alt" id="fit">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Is this a fit</p>
+      <h2>Built for agencies that run paid ads for clients.</h2>
+    </div>
+    <div class="grid two">
+      <article class="card reveal"><h3>This is for you if</h3>
+        <ul>
+          <li>You run an agency, or you're a solo media buyer, managing paid ads for clients.</li>
+          <li>Your clients are in coaching, education, services or e-commerce, or another niche where ad spend has to be tied to sales.</li>
+          <li>Your clients care about booked calls, sales and cash collected, not only clicks and leads.</li>
+          <li>You want reporting handled properly and kept up to date, without building a data team.</li>
+        </ul></article>
+      <article class="card reveal"><h3>This is not the right fit if</h3>
+        <ul>
+          <li>You need a one-off spreadsheet and no ongoing support.</li>
+          <li>You're happy with your current reporting and your clients are too.</li>
+        </ul>
+        <p>If that's you, I'd still be glad to point you in the right direction on a call.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 9. ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <!-- Photo: save assets/img/jayvee.jpg and set PHOTO_URL in script.js (see README). -->
+    <div class="photo reveal" id="photo" role="img" aria-label="Photo of Jayvee Respeto coming soon"><span aria-hidden="true">JR</span></div>
+    <div class="reveal">
+      <p class="eyebrow">About</p>
+      <h2>The person behind your reporting.</h2>
+      <div class="bio" style="margin-top:28px;max-width:var(--read)">
+        <p>I'm Jayvee Respeto, founder of AZ Digital PH. I build and run the reporting behind marketing teams, connecting Meta Ads, GoHighLevel, Stripe and BigQuery into dashboards that show clients exactly where their money went and what it returned. I've built reporting systems for high-ticket coaching and e-commerce brands.</p>
+        <p>I'm based in the Philippines. My working hours overlap with the Australian business day, and for US teams the work happens overnight, so reports are refreshed and checked before your day starts.</p>
+      </div>
+      <div class="cred"><b>50+</b><span>dashboards built</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL COMPONENT (disabled until real testimonials exist)
+<section class="alt" id="testimonials">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Client results</p><h2>What clients say.</h2></div>
+    <div class="grid two">
+      <figure class="card">
+        <blockquote>"Real quote goes here."</blockquote>
+        <figcaption>Name, role, agency</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- 10. RISK REVERSAL -->
+<section class="alt" id="audit">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Before you commit</p>
+      <h2>See the quality of the work before you pay for it.</h2>
+      <p>Book a call and I'll prepare a free Meta Ads audit report on one of your client accounts. It's a practical way to see how I read data and how I explain it, using an account you already know well.</p>
+    </div>
+    <ul class="audit-list reveal">
+      <li><strong>Executive summary and account snapshot.</strong> The main storylines for the period, with spend, conversions and account-level performance.</li>
+      <li><strong>Campaign and ad performance.</strong> Your top campaigns and ads ranked by spend, with results, cost per result, ROAS and click-through rate.</li>
+      <li><strong>Creative health.</strong> Which ads are fatiguing, based on falling click-through rate and rising cost per result, and which to refresh.</li>
+      <li><strong>Audience and delivery.</strong> Performance by placement, platform, device, age, gender, location and hour of day.</li>
+      <li><strong>Data trust.</strong> A check on whether conversion tracking is firing properly, including server-side signals.</li>
+      <li><strong>Opportunities.</strong> Meta's own optimisation recommendations, ranked by estimated impact.</li>
+      <li><strong>Action list.</strong> A prioritised, numbered list of what to change first.</li>
+    </ul>
+    <p class="delivery reveal"><strong>How it's delivered.</strong> You'll receive the report one to two days after our call. I only need access to the client's ad account: they add me as a partner or user, and I do the rest. The audit report is yours to keep, whether or not we work together.</p>
+    <p class="reveal"><a class="btn" href="#book" data-book>Book a Call</a></p>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Questions</p>
+      <h2>Common questions.</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>Which platforms can you connect?</summary><div class="ans"><p>Meta Ads, Google Ads, GoHighLevel, Stripe, Google Sheets, Looker Studio, BigQuery and Google Apps Script, plus Shopify, Amazon and Walmart for e-commerce clients, presented through Looker Studio or custom-built web dashboards. If your client uses something else, we'll review it on the call.</p></div></details>
+      <details><summary>Do my clients have to use GoHighLevel?</summary><div class="ans"><p>No. GoHighLevel is one of the CRMs I support. If your client uses a different system, we'll review it on the call.</p></div></details>
+      <details><summary>Is my client data safe?</summary><div class="ans"><p>Yes. Dashboards are access-protected. Data stays in accounts that you or your client control, such as Google Workspace and BigQuery. I only request the access each build needs.</p></div></details>
+      <details><summary>Can the dashboards carry my agency's branding?</summary><div class="ans"><p>Yes. Dashboards can carry your agency's logo, colours and your own web address, for example reports.youragency.com. Your client sees no AZ Digital PH branding.</p></div></details>
+      <details><summary>How long does the build take?</summary><div class="ans"><p>The build is completed within month one. Exact timing depends on how many data sources are involved, and we'll confirm it on the call.</p></div></details>
+      <details><summary>What happens after month one?</summary><div class="ans"><p>The ongoing partnership begins. I refresh and check the data, fix connections when platforms change and add new views as your client's needs grow.</p></div></details>
+      <details><summary>Why don't the numbers in Ads Manager and the CRM match? Can you fix that?</summary><div class="ans"><p>There are usually a few reasons. Meta credits a lead to an ad based on its attribution window, which can include people who saw an ad days earlier. The same person may submit a form twice and appear once in the CRM. Some CRM leads come from organic sources, not ads. And a broken form or integration can stop a lead from reaching the CRM at all.</p><p>I reconcile these sources and show both numbers side by side, with the reason for the gap. The two figures won't always match exactly, and I won't pretend they do. What changes is that you and your client can see why they differ.</p></div></details>
+      <details><summary>How much does it cost?</summary><div class="ans"><p>Pricing depends on how many clients and data sources are involved. It's presented on the call in a written offer.</p></div></details>
+      <details><summary>What's in the free Meta Ads audit report?</summary><div class="ans"><p>It covers campaign and ad performance, creative fatigue, performance by placement, device, demographics, location and time of day, a check on conversion tracking, Meta's ranked optimisation opportunities and a prioritised action list. It arrives one to two days after our call. I need access to the client's ad account to prepare it, and you keep the report whether or not we work together.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FINAL CTA -->
+<section class="alt final" id="book">
+  <div class="wrap">
+    <div class="read reveal">
+      <h2>Your clients judge your work by its report. Make it a good one.</h2>
+      <p>Book a call. We'll look at how you report today, where it breaks and what a better version would look like for your clients.</p>
+      <a class="btn btn-lg" href="#book" data-book>Book a Call</a>
+      <p class="reassure">30 to 45 minutes. No obligation. Free Meta Ads audit included.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="wordmark">AZ <span>Digital</span> PH</span>
+    <span>© 2026 · AZ Digital PH · Philippines</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

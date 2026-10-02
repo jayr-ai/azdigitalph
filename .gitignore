@@ -1,11 +1,4 @@
-node_modules/
+/reference/
 .DS_Store
-.env
-.env.local
-*.log
-dist/
-build/
-.vscode/
-.idea/
-*.swp
-*.swo
+Thumbs.db
+.claude/
