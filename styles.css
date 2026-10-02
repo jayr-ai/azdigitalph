@@ -181,5 +181,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .hero-demo{position:relative;overflow:hidden;background:var(--bg-base)}
 .hero-demo iframe{position:absolute;left:0;top:0;width:1280px;height:700px;border:0;transform-origin:0 0;opacity:0;transition:opacity .5s ease;pointer-events:none;background:var(--bg-base)}
 .hero-demo iframe.ready{opacity:1}
-.demo-frame{display:block;width:100%;height:680px;border:0;background:var(--bg-base)}
-@media(max-width:719px){.demo-frame{height:620px}}
+.demo-frame{display:block;border:0;background:var(--bg-base);width:100%;height:100%}
+/* laptop frame around the live demo (generic laptop, no brand marks) */
+.macbook{max-width:1040px;margin:0 auto;position:relative}
+.mb-lid{background:linear-gradient(180deg,#2b3038,#1c2026);border:1px solid #3a424d;border-radius:20px 20px 6px 6px;padding:10px 10px 12px;box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.03) inset}
+.mb-bezel{position:relative;background:#050607;border-radius:12px;padding:20px 10px 10px}
+.mb-cam{position:absolute;left:50%;top:7px;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:#14181d;box-shadow:0 0 0 1px #1d2229 inset,0 0 3px rgba(80,120,200,.35)}
+.mb-screen{border-radius:6px;overflow:hidden;background:var(--bg-base);position:relative}
+.mb-bar{height:30px;display:flex;align-items:center;gap:7px;padding:0 12px;background:#10141A;border-bottom:1px solid var(--border)}
+.mb-bar i{width:9px;height:9px;border-radius:50%;background:var(--border)}
+.mb-bar .url{margin-left:10px;font-size:.74rem;color:var(--text-secondary);background:var(--bg-base);padding:2px 12px;border-radius:6px}
+.mb-view{position:relative;overflow:hidden;height:560px}
+.mb-view iframe{position:absolute;left:0;top:0;transform-origin:0 0}
+.mb-base{position:relative;height:16px;width:104%;margin:0 -2%;background:linear-gradient(180deg,#3a414c,#232830 55%,#1a1e24);border-radius:0 0 22px 22px/0 0 14px 14px;border:1px solid #3a424d;border-top:0;box-shadow:0 22px 40px rgba(0,0,0,.5)}
+.mb-base span{position:absolute;left:50%;top:0;width:18%;max-width:150px;height:6px;margin-left:-9%;background:#14181d;border-radius:0 0 10px 10px}
+@media(max-width:719px){.mb-lid{border-radius:14px 14px 4px 4px;padding:6px 6px 8px}.mb-bezel{padding:14px 6px 6px;border-radius:9px}.mb-cam{top:4px;width:5px;height:5px}.mb-base{height:11px;width:102%;margin:0 -1%}}

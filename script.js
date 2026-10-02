@@ -76,6 +76,28 @@ const CONFIG = {
     window.addEventListener('load', function () { setTimeout(startHero, 6000); });
   }
   var demoFrame = document.getElementById('demo-frame');
+  var mbScreen = document.getElementById('mb-screen'), mbView = document.getElementById('mb-view');
+  if (demoFrame && mbScreen && mbView) {
+    // On wide screens the demo renders as a full desktop window and is scaled to fit the laptop screen (16:10).
+    // On narrow screens it stays at real size so the text remains readable.
+    var fitLaptop = function () {
+      var w = mbScreen.clientWidth;
+      if (w >= 760) {
+        var vw = 1100, s = w / vw, h = Math.round(w * 0.625 - 30);
+        mbView.style.height = h + 'px';
+        demoFrame.style.width = vw + 'px';
+        demoFrame.style.height = Math.round(h / s) + 'px';
+        demoFrame.style.transform = 'scale(' + s + ')';
+      } else {
+        mbView.style.height = '560px';
+        demoFrame.style.width = '100%';
+        demoFrame.style.height = '100%';
+        demoFrame.style.transform = 'none';
+      }
+    };
+    fitLaptop();
+    window.addEventListener('resize', fitLaptop);
+  }
   if (demoFrame) {
     if ('IntersectionObserver' in window) {
       var fio = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { loadFrame(demoFrame); fio.disconnect(); } }, { rootMargin: '600px 0px' });
