@@ -195,4 +195,19 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .mb-view iframe{position:absolute;left:0;top:0;transform-origin:0 0}
 .mb-base{position:relative;height:16px;width:104%;margin:0 -2%;background:linear-gradient(180deg,#3a414c,#232830 55%,#1a1e24);border-radius:0 0 22px 22px/0 0 14px 14px;border:1px solid #3a424d;border-top:0;box-shadow:0 22px 40px rgba(0,0,0,.5)}
 .mb-base span{position:absolute;left:50%;top:0;width:18%;max-width:150px;height:6px;margin-left:-9%;background:#14181d;border-radius:0 0 10px 10px}
-@media(max-width:719px){.mb-lid{border-radius:14px 14px 4px 4px;padding:6px 6px 8px}.mb-bezel{padding:14px 6px 6px;border-radius:9px}.mb-cam{top:4px;width:5px;height:5px}.mb-base{height:11px;width:102%;margin:0 -1%}}
+/* below tablet width the laptop becomes a phone (generic phone, no brand marks) */
+@media(max-width:819px){
+  .macbook{max-width:344px}
+  .mb-lid{position:relative;border-radius:50px;padding:10px;background:linear-gradient(145deg,#3a414c,#1a1e24);border:1px solid #474f5b;box-shadow:0 30px 70px rgba(0,0,0,.55)}
+  .mb-lid::before{content:"";position:absolute;left:-4px;top:108px;width:3px;height:54px;border-radius:2px 0 0 2px;background:#3a414c;box-shadow:0 70px 0 #3a414c}
+  .mb-lid::after{content:"";position:absolute;right:-4px;top:140px;width:3px;height:78px;border-radius:0 2px 2px 0;background:#3a414c}
+  .mb-bezel{padding:0;border-radius:40px;background:#000}
+  .mb-cam{top:12px;width:92px;height:26px;margin-left:-46px;border-radius:16px;background:#000;box-shadow:none;z-index:4}
+  .mb-screen{border-radius:40px}
+  .mb-screen::after{content:"";position:absolute;left:50%;bottom:7px;width:112px;height:4px;margin-left:-56px;border-radius:3px;background:rgba(245,241,232,.55);z-index:4}
+  .mb-bar{height:50px;padding:14px 26px 0;justify-content:space-between;align-items:flex-start;border-bottom:0;background:var(--bg-base);font-size:.8rem;font-weight:600;color:var(--text-primary)}
+  .mb-bar i,.mb-bar .url{display:none}
+  .mb-bar::before{content:"9:41"}
+  .mb-bar::after{content:"";width:24px;height:11px;margin-top:3px;border-radius:3px;border:1.5px solid var(--text-secondary);background:linear-gradient(90deg,var(--text-primary) 80%,transparent 80%);background-clip:content-box;padding:1px;box-sizing:border-box}
+  .mb-base{display:none}
+}

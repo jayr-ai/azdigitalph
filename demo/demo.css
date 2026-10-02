@@ -215,3 +215,6 @@ body.embed #nav{min-height:42px}
 .gran{max-width:100%;overflow-x:auto}
 .gran button{flex:none}
 @media (max-width:420px){.gran button{padding:6px 8px;font-size:.82rem}.controls select,.controls input[type=date]{max-width:100%}}
+/* inside the phone frame on the sales page, hide the scrollbar like a real phone */
+@media (max-width:819px){html:has(body.embed),body.embed{scrollbar-width:none}body.embed::-webkit-scrollbar,html:has(body.embed)::-webkit-scrollbar{display:none}}
+@media (max-width:819px){body.embed #nav{scrollbar-width:none}body.embed #nav::-webkit-scrollbar{display:none}}
