@@ -89,3 +89,7 @@ Rules for demo data:
 - Set `BOOKING_URL` (section 2).
 - Keep `reference/` out of the repository. It is already listed in `.gitignore`.
 - Deployment to `azdigitalph.com` happens last. Do not point the domain until you have approved the final site, and make sure the old site is archived first.
+
+## When you publish changes
+
+Browsers and GitHub Pages cache files for about ten minutes. To make sure visitors always get the page and its styles together, the links to `styles.css`, `script.js` and the demo files end in `?v=4`. When you change any of those files, raise that number in `index.html`, `404.html` and `demo/index.html` (for example `?v=5`).
