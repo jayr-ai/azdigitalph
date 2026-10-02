@@ -8,7 +8,13 @@ http.createServer((req, res) => {
   const file = path.join(__dirname, p);
   if (!file.startsWith(__dirname)) { res.writeHead(403); return res.end('Forbidden'); }
   fs.readFile(file, (err, data) => {
-    if (err) { res.writeHead(404); return res.end('Not found'); }
+    if (err) {
+      // Like GitHub Pages: show 404.html for a missing page.
+      return fs.readFile(path.join(__dirname, '404.html'), (e2, page) => {
+        res.writeHead(404, { 'Content-Type': 'text/html' });
+        res.end(e2 ? 'Not found' : page);
+      });
+    }
     const type = types[path.extname(file)] || 'application/octet-stream';
     const headers = { 'Content-Type': type, 'Cache-Control': 'max-age=600' };
     // Compress text files, as GitHub Pages does, so local speed tests match the live site.

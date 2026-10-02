@@ -140,6 +140,23 @@ const CONFIG = {
     cio.observe(counter);
   }
 
+  // Mobile sticky Book a Call bar: shown once the hero button has scrolled away, hidden again at the closing section.
+  var stickyBar = document.getElementById('sticky-cta');
+  var heroBtn = document.querySelector('.hero .cta-row .btn');
+  var closing = document.getElementById('book');
+  if (stickyBar && heroBtn && closing && 'IntersectionObserver' in window) {
+    var heroSeen = true, closingSeen = false;
+    var stickyLink = stickyBar.querySelector('a');
+    var updateSticky = function () {
+      var show = !heroSeen && !closingSeen;
+      stickyBar.classList.toggle('show', show);
+      stickyBar.setAttribute('aria-hidden', show ? 'false' : 'true');
+      stickyLink.setAttribute('tabindex', show ? '0' : '-1');
+    };
+    new IntersectionObserver(function (es) { heroSeen = es[0].isIntersecting; updateSticky(); }).observe(heroBtn);
+    new IntersectionObserver(function (es) { closingSeen = es[0].isIntersecting; updateSticky(); }, { threshold: 0.15 }).observe(closing);
+  }
+
   // FAQ: keep one answer open at a time.
   var faq = document.querySelectorAll('.faq details');
   faq.forEach(function (d) {

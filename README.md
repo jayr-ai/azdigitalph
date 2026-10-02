@@ -13,6 +13,7 @@ All demo data is **sample data** for two fictional brands (Summit Growth Academy
 | `demo/data/` | One data file per dashboard, generated from fixed seeds |
 | `assets/` | Icons, social image and the photo |
 | `copy.md` | The approved page copy, kept as a reference |
+| `404.html` | The page shown for a broken link (GitHub Pages uses it automatically) |
 | `serve.js` | A small preview server (see below) |
 | `CNAME` | Tells GitHub Pages to serve the site at `azdigitalph.com` |
 | `reference/` | Your private screenshots. This folder is **git-ignored** and is never published |

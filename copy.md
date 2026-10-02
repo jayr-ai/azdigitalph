@@ -264,6 +264,37 @@ It covers campaign and ad performance, creative fatigue, performance by placemen
 
 ---
 
+## 11b. How the free audit works (above the final call to action)
+
+**Eyebrow:** The free audit
+
+**Headline:** How the free audit works.
+
+**Intro:** Three steps, and you keep the report whatever you decide.
+
+1. **You add me to the ad account.** After our call, your client adds me to their Meta ad account. I only request the access the audit needs.
+2. **I prepare the report.** Within one to two days of the call, I review campaigns, creative, audience, delivery and conversion tracking.
+3. **You receive it and keep it.** You get a written report with a prioritised action list. It is yours to keep, whether or not we work together.
+
+**Note:** Read only: nothing in the ad account is changed by the audit.
+
+---
+
+## Mobile sticky bar
+
+Free Meta Ads audit included · **Book a Call**
+
+---
+
+## 404 page
+
+**Eyebrow:** Error 404
+**Headline:** This page does not exist.
+**Body:** The link may be old or mistyped. The page you want is probably one click away.
+**Links:** Back to the home page · See the live demo
+
+---
+
 ## 12. Final call to action
 
 **Headline:** Your clients judge your work by its report. Make it a good one.
