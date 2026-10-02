@@ -63,11 +63,11 @@ const CONFIG = {
       view.style.height = h + 'px'; frame.style.width = o.laptopVw + 'px';
       frame.style.height = Math.round(h / s) + 'px'; frame.style.transform = 'scale(' + s + ')';
     } else if (o.phoneVw) {
-      s = w / o.phoneVw; h = o.phoneH;
+      s = w / o.phoneVw; h = Math.round(w * 2.12 - 50);
       view.style.height = h + 'px'; frame.style.width = o.phoneVw + 'px';
       frame.style.height = Math.round(h / s) + 'px'; frame.style.transform = 'scale(' + s + ')';
     } else {
-      view.style.height = o.phoneRealH + 'px'; frame.style.width = '100%'; frame.style.height = '100%'; frame.style.transform = 'none';
+      view.style.height = Math.round(w * 2.12 - 50) + 'px'; frame.style.width = '100%'; frame.style.height = '100%'; frame.style.transform = 'none';
     }
   }
   var devices = [];
