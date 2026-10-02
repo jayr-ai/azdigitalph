@@ -157,6 +157,36 @@
       <p>These are rebuilds of real client dashboards, filled with sample data from two fictional brands: a coaching academy and an e-commerce store. Change the date range or switch from weeks to months, and every number updates.</p>
     </div>
     <div class="demo-label reveal"><span>Live demo · sample data. Real client dashboards are private.</span><a class="text-link" href="demo/">Open full screen →</a></div>
+    <div class="demo-stage">
+      <div class="stage-deco" aria-hidden="true">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <defs>
+            <radialGradient id="st-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#D4AF37" stop-opacity=".24"/><stop offset=".55" stop-color="#D4AF37" stop-opacity=".07"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+            <radialGradient id="st-fade" cx="50%" cy="50%" r="50%"><stop offset=".25" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+            <mask id="st-mask"><rect width="1600" height="900" fill="url(#st-fade)"/></mask>
+            <linearGradient id="st-beam" x1="0" x2="1"><stop offset="0" stop-color="#D4AF37" stop-opacity="0"/><stop offset=".5" stop-color="#D4AF37" stop-opacity=".55"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></linearGradient>
+            <pattern id="st-grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#fff" stroke-opacity=".06"/></pattern>
+          </defs>
+          <circle cx="800" cy="450" r="520" fill="url(#st-glow)"/>
+          <g mask="url(#st-mask)">
+            <rect width="1600" height="900" fill="url(#st-grid)"/>
+            <g fill="none" stroke="#D4AF37" vector-effect="non-scaling-stroke">
+              <circle cx="800" cy="450" r="300" stroke-opacity=".22"/>
+              <circle cx="800" cy="450" r="430" stroke-opacity=".16" stroke-dasharray="2 9"/>
+              <circle cx="800" cy="450" r="570" stroke-opacity=".12"/>
+              <circle cx="800" cy="450" r="730" stroke-opacity=".10" stroke-dasharray="1 11"/>
+            </g>
+          </g>
+          <path d="M0 810L1600 90" stroke="url(#st-beam)" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/>
+          <path d="M0 90L1600 810" stroke="url(#st-beam)" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"/>
+          <path d="M0 450H1600" stroke="url(#st-beam)" stroke-width="1" fill="none" stroke-opacity=".5" vector-effect="non-scaling-stroke"/>
+          <g stroke="#D4AF37" stroke-opacity=".5" stroke-width="1" fill="none" vector-effect="non-scaling-stroke">
+            <path d="M232 450h16M240 442v16"/><path d="M1352 450h16M1360 442v16"/>
+            <path d="M792 120h16M800 112v16"/><path d="M792 780h16M800 772v16"/>
+          </g>
+        </svg>
+      </div>
+      <div class="stage-floor" aria-hidden="true"></div>
     <div class="macbook reveal" id="macbook">
       <div class="mb-lid">
         <div class="mb-bezel">
@@ -171,6 +201,7 @@
         </div>
       </div>
       <div class="mb-base" aria-hidden="true"><span></span></div>
+    </div>
     </div>
     <div class="chips reveal" aria-label="Dashboards in the demo">
       <span class="chip">Executive Summary</span><span class="chip">Marketing</span><span class="chip">Sales and Pipeline</span><span class="chip">Revenue</span><span class="chip">Webinar Funnel</span><span class="chip">Lead Quiz</span><span class="chip">E-commerce CEO View</span><span class="chip">Profit and Loss</span>
