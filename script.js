@@ -54,55 +54,90 @@ const CONFIG = {
 
   // Live demo frames load lazily: the hero preview after first interaction, the full demo near the viewport.
   function loadFrame(f) { if (f && !f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src')); }
-  var heroBox = document.getElementById('hero-demo');
-  if (heroBox) {
-    var heroFrame = heroBox.querySelector('iframe');
-    var fit = function () {
-      var s = heroBox.clientWidth / 1280;
-      heroFrame.style.transform = 'scale(' + s + ')';
-      heroBox.style.height = Math.round(700 * s) + 'px';
-    };
-    fit();
-    window.addEventListener('resize', fit);
+  var narrow = window.matchMedia('(max-width: 819px)');
+  // Fit a device screen: wide screens show a scaled desktop window (laptop); narrow screens show a phone.
+  function fitDevice(screen, view, frame, o) {
+    var w = screen.clientWidth, s, h;
+    if (!narrow.matches) {
+      s = w / o.laptopVw; h = Math.round(w * 0.625 - 30);
+      view.style.height = h + 'px'; frame.style.width = o.laptopVw + 'px';
+      frame.style.height = Math.round(h / s) + 'px'; frame.style.transform = 'scale(' + s + ')';
+    } else if (o.phoneVw) {
+      s = w / o.phoneVw; h = o.phoneH;
+      view.style.height = h + 'px'; frame.style.width = o.phoneVw + 'px';
+      frame.style.height = Math.round(h / s) + 'px'; frame.style.transform = 'scale(' + s + ')';
+    } else {
+      view.style.height = o.phoneRealH + 'px'; frame.style.width = '100%'; frame.style.height = '100%'; frame.style.transform = 'none';
+    }
+  }
+  var devices = [];
+  var heroScreen = document.getElementById('hero-screen'), heroView = document.getElementById('hero-demo');
+  var heroFrame = heroView && heroView.querySelector('iframe');
+  if (heroScreen && heroFrame) {
+    devices.push(function () { fitDevice(heroScreen, heroView, heroFrame, { laptopVw: 1180, phoneVw: 390, phoneH: 470 }); });
     heroFrame.addEventListener('load', function () { heroFrame.classList.add('ready'); });
     // The static preview shows first. The live preview starts on the first interaction, or after 6 seconds.
     var heroStarted = false;
+    var heroEvents = ['pointerdown', 'scroll', 'keydown', 'mousemove', 'touchstart'];
     var startHero = function () {
       if (heroStarted) return; heroStarted = true;
-      ['pointerdown', 'scroll', 'keydown', 'mousemove', 'touchstart'].forEach(function (ev) { window.removeEventListener(ev, startHero); });
+      heroEvents.forEach(function (ev) { window.removeEventListener(ev, startHero); });
       loadFrame(heroFrame);
     };
-    ['pointerdown', 'scroll', 'keydown', 'mousemove', 'touchstart'].forEach(function (ev) { window.addEventListener(ev, startHero, { passive: true }); });
+    heroEvents.forEach(function (ev) { window.addEventListener(ev, startHero, { passive: true }); });
     window.addEventListener('load', function () { setTimeout(startHero, 6000); });
   }
   var demoFrame = document.getElementById('demo-frame');
   var mbScreen = document.getElementById('mb-screen'), mbView = document.getElementById('mb-view');
   if (demoFrame && mbScreen && mbView) {
-    // On wide screens the demo renders as a full desktop window and is scaled to fit the laptop screen (16:10).
-    // Below 820px the frame becomes a phone and the demo stays at real size so the text remains readable.
-    var fitLaptop = function () {
-      var w = mbScreen.clientWidth;
-      if (!window.matchMedia('(max-width: 819px)').matches) {
-        var vw = 1100, s = w / vw, h = Math.round(w * 0.625 - 30);
-        mbView.style.height = h + 'px';
-        demoFrame.style.width = vw + 'px';
-        demoFrame.style.height = Math.round(h / s) + 'px';
-        demoFrame.style.transform = 'scale(' + s + ')';
-      } else {
-        mbView.style.height = '620px';
-        demoFrame.style.width = '100%';
-        demoFrame.style.height = '100%';
-        demoFrame.style.transform = 'none';
-      }
-    };
-    fitLaptop();
-    window.addEventListener('resize', fitLaptop);
-  }
-  if (demoFrame) {
+    devices.push(function () { fitDevice(mbScreen, mbView, demoFrame, { laptopVw: 1100, phoneRealH: 620 }); });
     if ('IntersectionObserver' in window) {
       var fio = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { loadFrame(demoFrame); fio.disconnect(); } }, { rootMargin: '600px 0px' });
       fio.observe(demoFrame);
     } else { loadFrame(demoFrame); }
+  }
+  function fitAll() { devices.forEach(function (f) { f(); }); }
+  fitAll();
+  window.addEventListener('resize', fitAll);
+
+  // Header: scrolled state and a thin gold progress bar.
+  var header = document.getElementById('site-header'), bar = document.getElementById('progress'), ticking = false;
+  function onScroll() {
+    var y = window.scrollY || 0, max = document.documentElement.scrollHeight - window.innerHeight;
+    header.classList.toggle('scrolled', y > 8);
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0).toFixed(4) + ')';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  // Cards: a soft gold spotlight that follows the cursor (fine pointers only).
+  if (fine && !reduce) {
+    document.querySelectorAll('.card, .steps li').forEach(function (el) {
+      el.classList.add('spot');
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      }, { passive: true });
+    });
+  }
+
+  // Count-up for the dashboards-built figure.
+  var counter = document.querySelector('[data-count]');
+  if (counter && 'IntersectionObserver' in window && !reduce) {
+    var target = parseInt(counter.getAttribute('data-count'), 10);
+    var cio = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return;
+      cio.disconnect();
+      var t0 = performance.now(), dur = 1100;
+      (function step(now) {
+        var p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
+        counter.textContent = Math.round(target * eased) + (p < 1 ? '' : '+');
+        if (p < 1) requestAnimationFrame(step);
+      })(t0);
+    }, { threshold: 0.6 });
+    cio.observe(counter);
   }
 
   // FAQ: keep one answer open at a time.

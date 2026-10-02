@@ -32,7 +32,8 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
+<header class="site-header" id="site-header">
+  <div class="progress" id="progress" aria-hidden="true"></div>
   <div class="wrap">
     <a class="wordmark" href="#top" aria-label="AZ Digital PH, back to top">AZ <span>Digital</span> PH</a>
     <a class="btn btn-sm" href="#book" data-book>Book a Call</a>
@@ -54,24 +55,40 @@
       </div>
       <p class="note">A free Meta Ads audit report on one of your client accounts comes with every booked call.</p>
     </div>
-    <div class="frame" aria-hidden="true" inert>
-      <div class="frame-bar"><i></i><i></i><i></i><span class="url">reports.youragency.com</span></div>
-      <div class="hero-demo" id="hero-demo">
-      <div class="frame-body">
-        <div class="mock-top"><span>Marketing overview</span><span class="badge">Sample data</span></div>
-        <div class="mock-kpis">
-          <div class="mock-kpi"><small>Ad spend</small><b>$18,420</b></div>
-          <div class="mock-kpi"><small>Booked calls</small><b>212</b></div>
-          <div class="mock-kpi"><small>Cash collected</small><b>$96,300</b></div>
-          <div class="mock-kpi gold"><small>ROAS</small><b>5.2x</b></div>
+    <div class="macbook hero-laptop" aria-hidden="true" inert>
+      <div class="mb-lid">
+        <div class="mb-bezel">
+          <span class="mb-cam"></span>
+          <div class="mb-screen" id="hero-screen">
+            <div class="mb-bar"><i></i><i></i><i></i><span class="url">reports.youragency.com</span></div>
+            <div class="mb-view" id="hero-demo">
+        <div class="frame-body">
+          <div class="mock-top"><span>Marketing overview</span><span class="badge">Sample data</span></div>
+          <div class="mock-kpis">
+            <div class="mock-kpi"><small>Ad spend</small><b>$18,420</b></div>
+            <div class="mock-kpi"><small>Booked calls</small><b>212</b></div>
+            <div class="mock-kpi"><small>Cash collected</small><b>$96,300</b></div>
+            <div class="mock-kpi gold"><small>ROAS</small><b>5.2x</b></div>
+          </div>
+          <div class="mock-bars"><span style="height:40%"></span><span style="height:55%"></span><span style="height:48%"></span><span style="height:70%"></span><span style="height:62%"></span><span style="height:80%"></span><span style="height:74%"></span><span style="height:92%"></span></div>
         </div>
-        <div class="mock-bars"><span style="height:40%"></span><span style="height:55%"></span><span style="height:48%"></span><span style="height:70%"></span><span style="height:62%"></span><span style="height:80%"></span><span style="height:74%"></span><span style="height:92%"></span></div>
+              <iframe title="" tabindex="-1" data-src="demo/index.html?hero=1#executive"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
-      <iframe title="" tabindex="-1" data-src="demo/index.html?hero=1#executive"></iframe>
-      </div>
+      <div class="mb-base"><span></span></div>
     </div>
   </div>
 </section>
+
+<!-- Platform strip -->
+<div class="trust" aria-label="Platforms I work with">
+  <div class="wrap trust-in">
+    <p class="trust-l">Connected to the tools you already use</p>
+    <div class="marquee"><div class="track"><span>Meta Ads</span><span>Google Ads</span><span>GoHighLevel</span><span>Stripe</span><span>Shopify</span><span>Amazon</span><span>Walmart</span><span>Google Sheets</span><span>Looker Studio</span><span>BigQuery</span><span>Google Apps Script</span><span>Custom web dashboards</span><span class="dup" aria-hidden="true">Meta Ads</span><span class="dup" aria-hidden="true">Google Ads</span><span class="dup" aria-hidden="true">GoHighLevel</span><span class="dup" aria-hidden="true">Stripe</span><span class="dup" aria-hidden="true">Shopify</span><span class="dup" aria-hidden="true">Amazon</span><span class="dup" aria-hidden="true">Walmart</span><span class="dup" aria-hidden="true">Google Sheets</span><span class="dup" aria-hidden="true">Looker Studio</span><span class="dup" aria-hidden="true">BigQuery</span><span class="dup" aria-hidden="true">Google Apps Script</span><span class="dup" aria-hidden="true">Custom web dashboards</span></div></div>
+  </div>
+</div>
 
 <!-- 2. PROBLEM -->
 <section class="alt" id="problem">
@@ -253,7 +270,7 @@
         <p>I'm Jayvee Respeto, founder of AZ Digital PH. I build and run the reporting behind marketing teams, connecting Meta Ads, GoHighLevel, Stripe and BigQuery into dashboards that show clients exactly where their money went and what it returned. I've built reporting systems for high-ticket coaching and e-commerce brands.</p>
         <p>I'm based in the Philippines. My working hours overlap with the Australian business day, and for US teams the work happens overnight, so reports are refreshed and checked before your day starts.</p>
       </div>
-      <div class="cred"><b>50+</b><span>dashboards built</span></div>
+      <div class="cred"><b data-count="50">50+</b><span>dashboards built</span></div>
     </div>
   </div>
 </section>
