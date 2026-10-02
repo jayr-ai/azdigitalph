@@ -268,3 +268,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .sticky-cta p{margin:0;font-size:.86rem;line-height:1.3;color:var(--text-secondary)}
 @media(max-width:719px){.sticky-cta{display:flex}footer{padding-bottom:88px}}
 @media(prefers-reduced-motion:reduce){.sticky-cta,.sticky-cta.show{transition:none}}
+
+/* platform marks: outline ("skeleton") icons with a glowing edge */
+.ic{flex:none;width:24px;height:24px;fill:none;stroke:#E6E0CD;stroke-width:1;stroke-linejoin:round;stroke-linecap:round;filter:drop-shadow(0 0 2.5px rgba(212,175,55,.75)) drop-shadow(0 0 9px rgba(212,175,55,.28));transition:filter .3s,stroke .3s}
+.plat,.plat-chip{display:inline-flex;align-items:center;gap:10px}
+.track .plat{gap:11px}
+.plat:hover .ic,.plat-chip:hover .ic{stroke:#fff;filter:drop-shadow(0 0 3px rgba(243,215,122,.95)) drop-shadow(0 0 13px rgba(212,175,55,.5))}
+.platforms .plat-chip{padding:8px 16px 8px 12px}
+.legal{padding-top:16px;margin-top:20px;border-top:1px solid var(--border);display:block}
+.legal p{margin:0;font-size:.76rem;color:var(--text-secondary);max-width:760px}
+footer .wrap.legal{display:block}
