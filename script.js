@@ -2,7 +2,7 @@
 const CONFIG = {
   // Set this to the booking tool link when it is ready.
   // While it is "#book", every Book a Call button scrolls to the final call-to-action.
-  BOOKING_URL: '#book',
+  BOOKING_URL: 'https://calendly.com/jayveerespeto/kickstarter-session',
 };
 
 (function () {
